@@ -2,6 +2,7 @@ import './style.css'
 import * as THREE from 'three/webgpu'
 import { color, texture, convertColorSpace } from 'three/tsl'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
+import { GUI } from 'dat.gui'
 
 const scene = new THREE.Scene()
 
@@ -39,6 +40,13 @@ renderer.debug.getShaderAsync(scene, camera, mesh).then((e) => {
   // console.log(e.vertexShader)
   console.log(e.fragmentShader)
 })
+
+const gui = new GUI()
+const cubeFolder = gui.addFolder('Cube')
+cubeFolder.add(mesh.position, 'x', 0, Math.PI * 2)
+cubeFolder.add(mesh.position, 'y', 0, Math.PI * 2)
+cubeFolder.add(mesh.position, 'z', 0, Math.PI * 2)
+cubeFolder.open()
 
 function animate() {
   controls.update()
