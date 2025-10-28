@@ -1,56 +1,106 @@
-# Three.js-Boilerplate-TS-Vite
+# 🎨 Three.js TSL + TypeScript + Vite Template
 
-A Three.js Boilerplate for TypeScript Vite projects.
+> ✨ A modern boilerplate for creating stunning WebGPU-powered 3D experiences with Three.js Shading Language (TSL)
 
-This boilerplate is supplementary to <!--my book titled [**Three.js and TypeScript**](https://amzn.to/3FahROZ) and--> my **ThreeJS and TypeScript** courses at [Udemy](https://www.udemy.com/course/threejs-tutorials/?referralCode=4C7E1DE91C3E42F69D0F) and [YouTube (Channel membership required)](https://www.youtube.com/playlist?list=PLKWUX7aMnlEKTmkBqwjc-tZgULJdNBjEd)
+## 🚀 What's Inside?
 
-[Introductory Video](https://youtu.be/cZWAqrJhtvQ&list=PLKWUX7aMnlEKTmkBqwjc-tZgULJdNBjEd)
+This template combines the best of modern web development:
 
-[Course Discount Coupons](https://sbcode.net/coupons#threejs)
+- **🎯 Three.js WebGPU** - Next-generation 3D rendering with GPU compute power
+- **🔮 TSL (Three.js Shading Language)** - Node-based material system for powerful visual effects
+- **💪 TypeScript** - Type-safe development with excellent IntelliSense
+- **⚡ Vite** - Lightning-fast development server and build tool
+- **🎮 OrbitControls** - Interactive camera controls out of the box
+- **📱 Responsive Design** - Automatically adapts to different screen sizes
 
-## Boilerplate Overview
+## 🎯 Perfect For
 
-When run, the boilerplate shows a multi-coloured wireframe cube, with `OrbitControls`, `Dat.GUI` and `Stats.js` included.
+- 🎨 Creative coding and generative art
+- 🎮 Interactive 3D experiences
+- 📊 Data visualization with WebGPU
+- 🧪 Shader experimentation with TSL
+- 🎓 Learning modern Three.js development
 
-[Example](https://sean-bradley.github.io/Three.js-Boilerplate-TS-Vite/)
+## 🛠️ Getting Started
 
-![](docs/screengrab.jpg)
+### Prerequisites
+- Node.js 16+ installed
+- A modern browser with WebGPU support (Chrome 113+, Edge 113+)
 
-## Installing
+### 🏃‍♂️ Development
+
+Fire up the development server:
 
 ```bash
-git clone https://github.com/Sean-Bradley/Three.js-Boilerplate-TS-Vite.git
-cd Three.js-Boilerplate-TS-Vite
-npm install
-```
-
-### Develop
-
-```
 npm run dev
 ```
 
-Visit [http://localhost:5173/](http://localhost:5173/)
+🌐 Open your browser and visit **[http://localhost:5173/](http://localhost:5173/)**
 
-### Build Production
+Your changes will hot-reload instantly! ⚡
+
+### 🏗️ Production Build
+
+Build your project for production:
 
 ```bash
 npm run build
 npm run preview
 ```
 
-Visit [http://localhost:4173/](http://localhost:4173/)
+🌐 Preview your production build at **[http://localhost:4173/](http://localhost:4173/)**
 
-### Deploy to GitHub pages
+### 🚀 Deploy to GitHub Pages
 
-If you forked this repository, then you can publish your changes to GitHub pages.
+Share your creation with the world! If you forked this repository:
 
 ```bash
 npm run deploy
 ```
 
-Visit `https://<your github username>.github.io/Three.js-Boilerplate-TS-Vite/`
+🌍 Your site will be live at `https://<your-github-username>.github.io/tsl-ts-vite`
 
-E.g.,
+## 🎨 What You'll See
 
-[https://sean-bradley.github.io/Three.js-Boilerplate-TS-Vite/](https://sean-bradley.github.io/Three.js-Boilerplate-TS-Vite/)
+The template includes a simple example featuring:
+- 📐 A textured plane geometry
+- 🖼️ UV grid texture with proper color space conversion
+- 🎭 TSL-powered material system
+- 🕹️ Interactive orbit controls
+- 🔍 Shader debugging capabilities
+
+## 🧠 Key Concepts
+
+### TSL (Three.js Shading Language)
+TSL is a revolutionary node-based approach to creating materials in Three.js. Instead of writing raw GLSL, you compose materials using JavaScript functions that generate optimized shaders.
+
+Example from the template:
+```typescript
+// Traditional approach: Write GLSL shaders
+// TSL approach: Compose with functions! ✨
+material.fragmentNode = convertColorSpace(
+  texture(tex), 
+  THREE.SRGBColorSpace, 
+  THREE.LinearSRGBColorSpace
+)
+```
+
+### WebGPU Renderer
+This template uses the cutting-edge WebGPU renderer, offering:
+- 🚀 Better performance than WebGL
+- 💻 Compute shader support
+- 🔮 Modern GPU features
+- 📈 Future-proof architecture
+
+## 🤝 Contributing
+
+Found a bug or have an idea? Feel free to:
+- 🐛 Open an issue
+- 🔧 Submit a pull request
+- 💡 Share your creations!
+
+---
+
+**Happy coding!** 🚀✨
+
+Made with ❤️ using Three.js, TSL, TypeScript, and Vite
